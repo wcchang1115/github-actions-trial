@@ -1,0 +1,12 @@
+name: learn-github-actions
+
+on:
+  release:
+    types: [ created ]
+
+jobs:
+  show_release_tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print release info
+        run: echo {{ github.event.release.tag_name }}
