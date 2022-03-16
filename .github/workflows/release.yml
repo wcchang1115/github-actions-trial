@@ -14,6 +14,9 @@ jobs:
           echo "${{ github.sha }}"
           echo "${{ github.ref }}"
 
+      - name: checkout
+        uses: actions/checkout@v2
+
       - name: checkout with tag
         uses: actions/checkout@v2
         with:
